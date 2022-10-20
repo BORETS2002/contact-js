@@ -11,7 +11,7 @@ elBtn.addEventListener("click", function (evt){
 
   evt.preventDefault()
   
-  arr = 
+  let arr = 
   {
   names: Elinput.value ,
   Realitionship: Elinputtwoo.value ,

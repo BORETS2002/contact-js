@@ -27,6 +27,8 @@ elBtn.addEventListener("click", function (evt){
    b.textContent = arr.Realitionship
    c.textContent = arr.tel
  
+   c.setAttribute("href" , `tel:+${arr.tel}`)
+   c.setAttribute("class", "hreft")
    Elli.setAttribute ("class" , "itms")
 
    Elli.appendChild(a)

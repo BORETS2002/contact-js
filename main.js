@@ -5,29 +5,34 @@ const elBtn = document.querySelector(".btn");
  
 const ElBoxJavob =document.querySelector(".javob-box");
  
+let arr = []
 
 
 elBtn.addEventListener("click", function (evt){
 
   evt.preventDefault()
+ var ElinputValue = Elinput.value 
+ var ElimputtwooValue =Elinputtwoo.value
+ var ElinputthreeValue = Elinputhree.value
   
-  let arr = 
-  {
-  names: Elinput.value ,
-  Realitionship: Elinputtwoo.value ,
-  tel : Elinputhree.value
+  obj = {
+  names:ElinputValue ,
+  Realitionship:ElimputtwooValue ,
+  tel : ElinputthreeValue 
   }
-  
+  arr.push(obj)
 
+  for (const item of arr) {
+    
    Elli = document.createElement("li")
   a = document.createElement("h3")
   b =document.createElement("p")
   c = document.createElement("a")
-   a.textContent = arr.names
-   b.textContent = arr.Realitionship
-   c.textContent = arr.tel
+   a.textContent = item.names
+   b.textContent = item.Realitionship
+   c.textContent = item.tel
  
-   c.setAttribute("href" , `tel:+${arr.tel}`)
+   c.setAttribute("href" , `tel:+${item.tel}`)
    c.setAttribute("class", "hreft")
    Elli.setAttribute ("class" , "itms")
 
@@ -36,6 +41,8 @@ elBtn.addEventListener("click", function (evt){
    Elli.appendChild(c)
 
 ElBoxJavob.appendChild(Elli)
+}
+console.log(arr);
 
 Elinput.value = ""
 Elinputtwoo.value = ""
